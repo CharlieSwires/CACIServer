@@ -1,6 +1,7 @@
 package caci.order.resources;
 
 import javax.ws.rs.Consumes;
+import javax.ws.rs.GET;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
@@ -12,7 +13,7 @@ public class OrderService {
 	@POST
 	@Path("/makeOrder")
 	@Consumes(MediaType.APPLICATION_JSON)
-	@Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
+	@Produces({MediaType.APPLICATION_JSON})
 	public MakeOrderBean makeOrder(OrderBrick bricks) {
 
 		Singleton store = Singleton.getInstance();
@@ -24,7 +25,7 @@ public class OrderService {
 	@POST
 	@Path("/retrieveAllOrders")
 	@Consumes(MediaType.APPLICATION_JSON)
-	@Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
+	@Produces({MediaType.APPLICATION_JSON})
 	public RetrieveOrdersBean retrieveAllOrders(Dummy val) {
 
 		Singleton store = Singleton.getInstance();
@@ -36,7 +37,7 @@ public class OrderService {
 	@POST
 	@Path("/retrieveOrder")
 	@Consumes(MediaType.APPLICATION_JSON)
-	@Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
+	@Produces({MediaType.APPLICATION_JSON})
 	public RetrieveOrderBean retrieveOrder(OrderNum orderNum) {
 
 		Singleton store = Singleton.getInstance();

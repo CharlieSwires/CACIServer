@@ -11,5 +11,5 @@ public class Dummy {
 	public void setDummy(int dummy) {
 		this.dummy = dummy;
 	}
-	
+	 
 }

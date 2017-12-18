@@ -14,5 +14,5 @@ public class RetrieveOrdersBean {
 	public void setBeans(List<RetrieveOrderBean> beans) {
 		this.beans = beans;
 	}
-	
+	 
 }

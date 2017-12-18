@@ -27,7 +27,7 @@ public class Singleton {
 		returnValue.setOrderNum(orderNum++);
 		return returnValue;
 	}
-
+ 
 	public RetrieveOrderBean retrieveOrder(int orderNum2) {
 		// TODO Auto-generated method stub
 		return (RetrieveOrderBean) internalStore.get(orderNum2);
