@@ -23,18 +23,6 @@ public class OrderService {
 	}
 	
 	@POST
-	@Path("/retrieveAllOrders")
-	@Consumes(MediaType.APPLICATION_JSON)
-	@Produces({MediaType.APPLICATION_JSON})
-	public RetrieveOrdersBean retrieveAllOrders(Dummy val) {
-
-		Singleton store = Singleton.getInstance();
-		RetrieveOrdersBean result = store.retrieveOrders();
-		return result;
-
-	}
-	
-	@POST
 	@Path("/retrieveOrder")
 	@Consumes(MediaType.APPLICATION_JSON)
 	@Produces({MediaType.APPLICATION_JSON})
@@ -45,5 +33,15 @@ public class OrderService {
 		return result;
 
 	}	
+	
+	@GET
+	@Path("/retrieveAllOrders")
+	@Produces({MediaType.APPLICATION_JSON})
+	public RetrieveOrdersBean retrieveAllOrders() {
 
+		Singleton store = Singleton.getInstance();
+		RetrieveOrdersBean result = store.retrieveOrders();
+		return result;
+
+	}
 }
